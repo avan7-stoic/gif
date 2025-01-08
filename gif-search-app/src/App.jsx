@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SearchBar from './components/SearchBar';
 import GifGrid from './components/GifGrid';
 import Favorites from './components/Favorites';
+import GifSearch from './components/GifSearch';
 import { fetchGifs } from './utils/api';
 import './App.css';
 
