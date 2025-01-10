@@ -1,37 +1,129 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9fc;
   margin: 0;
   padding: 0;
 }
 
 h1 {
+  color: #333;
   text-align: center;
+  margin: 20px 0;
 }
 
-.search-bar {
+/* Search Bar Styles */
+.search-container {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
-.search-bar input {
+input {
   width: 300px;
-  padding: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  outline: none;
+  font-size: 16px;
 }
 
-.search-bar button {
-  padding: 10px 20px;
-  margin-left: 10px;
+button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.gif-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 20px;
+button:hover {
+  background-color: #0056b3;
+}
+
+/* GIF Results Styles */
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gif-card {
+  width: 220px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.gif-card:hover {
+  transform: translateY(-5px);
 }
 
 .gif-card img {
   width: 100%;
-  border-radius: 5px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.gif-card button {
+  width: 100%;
+  padding: 12px;
+  border-top: 1px solid #eee;
+  background-color: #ff4b5c;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 0 0 10px 10px;
+}
+
+.gif-card button:hover {
+  background-color: #d43a4a;
+}
+
+/* Favorites Section */
+.favorites-container {
+  margin-top: 40px;
+}
+
+.favorites-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+.favorites-container .gif-card {
+  width: 180px;
+}
+
+.favorites-container button {
+  background-color: #ff6600;
+}
+
+.favorites-container button:hover {
+  background-color: #cc5200;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  input {
+    width: 70%;
+  }
+
+  .results-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gif-card {
+    width: 90%;
+  }
+
+  .favorites-container .gif-card {
+    width: 80%;
+  }
 }
